@@ -1,0 +1,4 @@
+Async function async function g(){      
+ var x = await fetch("https://jsonplaceholder.typicode.com/users");      
+ x = await x.json();      
+ alert(x.length);    };

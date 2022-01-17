@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+<script src="./product.js">
+class Product
+{
+  constructor(Name,Id,Model,Price,Year_of_Manufacure, Country)
+  {
+    this.name = name;
+    this.id= id;
+    this.model = model;
+    this.price = price;
+    this.yom= yearomanf;
+    this.cou=country;
+  }
+
+  display()
+  {
+    document.write("<br> Product name is:"+name);
+    document.write("<br> Product name is:"+id);
+    document.write("<br> Product name is:"+model);
+    document.write("<br> Product name is:"+price);
+    document.write("<br> Product name is:"+yearomanf);
+    document.write("<br> Product name is:"+country);
+    document.write("<br><br>"); 
+  } 
+};
+
+var p1 = new Product ("Laptop", "0012","Lenovo",75000,2019,"China");
+var p2 = new Product ("TV","0123","Sony",70000,2020,"Taiwan");
+var p3 = new Product ("Mobile","0223","Samsung",55000,2021,"India");
+var p4 = new Product ("Headphones","0322"," Boat",1000,2017,"Korea");
+var p5 = new Product ("Oven","0435","Glenn",45000,2018,"Germany");
+
+p1.display();
+p2.display();
+p3.display();
+p4.display();
+p5.display();
+
+</script>
+</head>
+</body>
+</html>

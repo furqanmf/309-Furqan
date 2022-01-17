@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Forms</title>
+    <header style="font-size: 14pt; color:white; background-color: black; text-align: center;display:inline">AJAX</header>
+    <hr>
+    <div id="logger"></div>
+    <hr>
+</head>
+<script>
+    var logg = document.getElementById("logger");
+ 
+    const sendAJaxRequest = () => {
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = mycallBack;
+ 
+        request.open("GET", "https://jsonplaceholder.typicode.com/users?id=7");
+        request.send("null");
+ 
+    };
+ 
+    mycallBack = (evt) => {        
+        if ((evt.currentTarget.readyState == 4)
+            && (evt.currentTarget.status == 200 || evt.currentTarget.status == 0)) {
+            var json_data = JSON.parse(evt.currentTarget.responseText);
+ 
+            logg.innerHTML=logg.innerHTML + 
+            `Name of seventh person : ${json_data[6].name}`;
+            logg.innerHTML=logg.innerHTML +
+             `<br>  Address of seventh person :
+              ${JSON.stringify(json_data[6].address)}`;
+ 
+            logg.innerHTML=logg.innerHTML +
+             `<br> All details of seventh person : ${JSON.stringify(json_data[6] )}`;
+ 
+        }
+    }
+ 
+</script>
+ 
+<body>
+    <p>xaaasasa</p>
+ 
+    <button onclick="sendAJaxRequest();">Click here to send an Ajax request</button>
+</body>

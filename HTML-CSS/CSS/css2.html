@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+ 
+ 
+ 
+ 
+<form>
+    <br /><label>Select your house color:</label>
+    <input type="color" name="houseColor" value="rgb(255,0,0)">
+ 
+ 
+    <br /><br /><label>Select a time for backup:</label>
+    <input type="time" name="scheduledTime" value="23:00">
+ 
+    <br /><br /><label>Select a date to start the backup:</label>
+    <input type="date" name="bdaytime" value="2022-01-10" min="2022-01-10">
+ 
+    <br /><br /><label>Select a date to start the backup: (date and time)</label>
+    <input type="datetime-local" name="bdaytime">
+ 
+    <br /><br />
+    Select a week:
+    <input type="week" name="trekWeekYear">
+ 
+    <br /><br />
+    Desired Example Start (week and year):
+    <input type="week" name="examWeekYr" value="2015-W01" min="2015-W01" max="2015-W52">
+ 
+    <br /><br />
+    <!-- Desired Insurance Policy Start (month and year):
+    <input type="month" name="policyMntYr" value="2000-01" min="2015-01" max="2021-01"> -->
+ 
+    <br /><br />
+    <p>Validation Works on Chrome to some extent. Doesn't work on FF </p>
+    E-mail: <input type="email" name="myYahooEmailID">
+ 
+    <br /><br />
+    Quantity (between 1 and 5): <input type="number" name="quantity" min="1" max="5">
+ 
+    <br /><br />Range type (select 1 to 10 in steps of 5) <br />
+    <input type="range" name="points" min="0" max="10" step=5>
+ 
+    <br /><br />
+    Home Telephone: <input type="tel" name="homeTelephone">
+ 
+    <br /><br />
+    Add your homepage: <input type="url" name="homePage">
+ 
+    <br /><br />
+    <p>Score Card:</p>
+    <p>Physics <meter id="0001meter" name="batsman1" value="65" min="0" max="100">65 out of 100</meter><br>
+    <p>Maths <meter name="batsman2" value="0.6">60%</meter>
+ 
+        <br /><br />
+        <input type="submit">
+ 
+
+ <input type="submit">
+<script>
+    alert("Meter value :"+ document.getElementById("0001meter").value);
+    document.getElementById("0001meter").value = 100;
+ 
+</script>
+ 
+</html>

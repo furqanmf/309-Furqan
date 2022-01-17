@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<style>
+    div{
+        background: pink;
+        border: 5px solid:black;
+        margin: 5px;
+        padding: 5px;
+    }
+    .section_grid {
+        display: grid;
+        grid-template-columns: repeat(1 2fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+ 
+    .product4 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        
+   
+    }
+ 
+    .product8 {
+        grid-column: span 3;
+    }
+ 
+ 
+</style>
+ 
+<section class="section_grid">
+    <div> Logo</div>
+    <div>Navigation Bar </div>
+    <div> Login </div>
+    <div class="product4">product 4</div>
+
+<section class="inner_section_grid">
+    <div class="product5">product 5  </div>
+    <div>product 6 </div>
+</section>
+ 
+</html>

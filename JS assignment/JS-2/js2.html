@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./js2.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <header>TEXT-BOX PROBLEM</header>
+    <br />
+    <br />
+
+    <title>Java Script Assignment2</title>
+    <p><b> Exercise JS-02 </b> </p>
+    <div id="logger">
+      <b>You Should Enter: "She sells sea shells on the sea shore" TO MATCH otherwise it will NOT Match</b><br />
+      <b>Also Count Number Of Words & Letters</b>
+    </div>
+    <br />
+    <br />
+  </head>
+         <form name="userForm">
+           <b> Enter your Input here : </b> <input type="text" name="string" id="string" />
+           <input
+           class="btn"
+           type="submit"
+           onclick=" FormProcessor(); return false;"
+           />
+          <input
+          class="btn"
+          type="submit" value="Click here for Count" onclick="countWords(); return false;"/>
+          <p>Word Count: <span id="show">0</span></p>
+		      <p>letters Count: <span id="shows">0</span></p>
+          </form> 
+        </body>
+  <script>
+    var log = document.getElementById("logger");
+    FormProcessor = () => {
+      let formHandle = document.forms["userForm"];
+      log.innerHTML = `<b>Match FAILED.</b><br><br><b> You Entered  :</b> <span style = "color:red">${formHandle.string.value}</span>`;
+      if (formHandle.string.value == "She sells sea shells on the sea shore") {
+        log.innerHTML = `<b>Match SUCCESS.</b><br><br><b> You Entered  :</b> <span style="color:green">She sells sea shells on the sea shore</span>`;
+      } else {
+        alert(`You Entered : ${formHandle.string.value}`);
+      }
+    };
+    function countWords() {
+				var text = document.getElementById("string").value;
+				var countWords = text.match(/\w+/g).length;
+				var countLetter = 0;
+
+				for (var i = 0; i < text.length; i++) {
+					if (text[i] != " ") {
+						countLetter++;
+					}
+				}
+
+				document.getElementById("show").innerHTML = countWords;
+				document.getElementById("shows").innerHTML = countLetter;
+			}
+			
+
+  </script>
+</html>

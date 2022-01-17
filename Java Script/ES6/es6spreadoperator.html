@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="ÜTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <tilte>Spread Operator</tilte>
+</head>
+
+<script>
+    //var logger =document.getElementById("logger");
+
+    function average(a,b,c){
+        return (a+b+c)/3;
+    }
+
+    //logger.innerHTML = `<br>Average of 10 20 30 is ${average(10,20,30)}` ;
+    document.write(`<br>Average of 10 20 30 is ${average(10,20,30)}`);
+
+    var arr1 =[10,5,6,7,7,78,27,45,25,26];
+    // how can we find the avg of elements in arr1
+    var arr1Avg = average(...arr1 );
+    document.write(`<br>Average of array [10 24 30] is ${arr1Avg}}` );
+
+//coding challenge -1. concateanating two arrays.
+var arr1 = [2,4,56];
+var arr2 = [12,30,5,6];
+var arr3 =[];//array to hold the combined arrays.
+
+var i=0;
+for(i=0;i<arr1.length;i++){
+  arr3[i] == arr1[i];
+}
+
+for(j=0;j<arr2.legth;j++){
+     arr3[i] == arr2[j];
+}
+
+document.write('<br><br> combines array arr3 is ${arr3}');
+
+document.write('<br><br> combines array using concat ${arr1.concat(arr2)}');
+
+var arrcombined = [...arr1,...arr2];
+document.write('<br><br> combines array using ... is $ {arrCombined} ');
+
+
+
+</script>
+
+
+<body>
+<heade style="font-size: 24pt; color: white; background-color: black; text-align: center;">Spread Operator</heade></header>
+<div id= "logger">Log statements here</div>
+
+</body>
+</html>>
