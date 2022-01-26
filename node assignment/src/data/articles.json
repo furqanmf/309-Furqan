@@ -1,0 +1,62 @@
+[
+  {
+      "author": "Alex Parker",
+      "title": "Health is Wealth",
+      "abstract": "Description of the statement Health is Wealth",
+      "body": "How health is important in ones life and play a vital role is further discussed",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0021/9860/1764/files/Health_is_Wealth1_png_2426x.png?v=1524584871?width=800",
+      "createdAt": " ",
+      "comments": [
+   
+          {
+              "commenter":"xyz",
+              "title":"True",
+              "comment":"So true and correct",
+              "createdAt":" "
+      
+           },
+           {
+              "commenter":"pqr",
+              "title":"Not so True",
+              "comment":"Do not agree. You must be more clear",
+              "createdAt":" "
+      
+           }
+      ]
+  },
+
+  {
+      "author": "Peter Pan",
+      "title": "Computer Science",
+      "abstract": "Description of the various parts of Computer Science",
+      "body": "Computer nowadays play a vital role in everydays life and its featured are further discussed",
+      "imageUrl": "https://images4.content-hci.com/commimg/myhotcourses/blog/post/myhc_89683.jpg?width=800",
+      "createdAt": " ",
+      "comments": [
+   
+          {
+              "commenter":"abc",
+              "title":"More features",
+              "comment":" You can add more in detail",
+              "createdAt":""
+      
+           }
+      ]
+  },
+  {
+      "author": "Zack Smith",
+      "title": "Food",
+      "abstract": "Description of the variety of foods",
+      "body": "Food around the world is discussed here",
+      "imageUrl": "https://k48b9e9840-flywheel.netdna-ssl.com/wp-content/uploads/2020/05/FoodTank_MediterraneanDietMonth.jpg?width=800",
+      "createdAt": " "
+  },
+  {
+      "author": "Barry Allen",
+      "title": "Gadgets",
+      "abstract": "Description of different gadegets",
+      "body": "Latest Gadgets description are discussed",
+      "imageUrl": "https://media.istockphoto.com/vectors/different-computer-gadgets-icon-doodle-vector-illustration-isolated-vector-id1055151700?width=800",
+      "createdAt": " "
+  }
+]
