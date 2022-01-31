@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>EMPLOYEE DETAILS DEMO</title>
+    <script
+      type="application/javascript"
+      src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"
+    ></script>
+    <script
+      type="application/javascript"
+      src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"
+    ></script>
+    <script
+      type="application/javascript"
+      src="https://unpkg.com/babel-standalone@6.26.0/babel.js"
+    ></script>
+  </head>
+
+  <body>
+    <div id="emp"></div>
+    <div id="emp1"></div>
+    <div id="emp2"></div>
+    <div id="emp3"></div>
+    <div id="emp4"></div>
+    <div id="emp5"></div>
+
+
+    <script type="text/babel">
+      // Obtain the root
+      // const rootElement = document.getElementById('root')
+      // Create a ES6 class component
+      class Employee extends React.Component {
+        // Use the render function to return JSX component
+        render() {
+          return (
+            <div>
+              <h1>Employee Detail Fields</h1>
+              <ul>
+                <li>ID</li>
+                <li>FNAME</li>
+                <li>LNAME</li>
+                <li>AGE</li>
+                <li>GENDER</li>
+                <li>ORGANIZATION</li>
+                <li>SALARY</li>
+                <li>NATIONALITY</li>
+                <li>QUALIFICATIONS</li>
+                <li>INTERESTS</li>
+              </ul>
+              <h2>
+                ********************Details of all the employees are displayed
+                below********************
+              </h2>
+            </div>
+          );
+        }
+      }
+
+      // Use the ReactDOM.render to show your component on the browser
+      ReactDOM.render(<Employee />, document.getElementById("emp"));
+      var i = new Set();
+      i.add("Football");
+      i.add("Squash");
+      i.add("Volleyball");
+
+      var j = new Set();
+      j.add("B.TECH");
+      j.add("M.TECH");
+
+
+      class Person extends React.Component {
+        // Default props
+        static defaultProps = {
+          'gender' : "Female",
+          'nationality' : ['Indian']
+        }
+        render() {
+          //object destructuring
+          const { id,fname,lname,age,gender,organization,salary,nationality, qualification, interests} = this.props;
+
+          var a = id;
+          var b = fname;
+          var c = lname;
+          var d = age;
+          var e = gender;
+          var f = organization;
+          var g = salary;
+          var h = nationality[0];
+
+          return (
+            <h3>
+              ID : {a}
+              <br />
+              FName : {b}
+              <br />
+              LName : {c}
+              <br />
+              AGE : {d}
+              <br />
+              GENDER : {e}
+              <br />
+              ORGANIZATION : {f}
+              <br />
+              SALARY : {g}
+              <br />
+              NATIONALITY : {h}
+              <br />
+              <hr />
+              QUALIFICATION:
+              <ul>
+                {Array.from(qualification).map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+              <hr />
+              INTERESTS:
+              <ul>
+                {Array.from(interests).map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+              <br />
+              <br />
+              <hr />
+              <hr />
+            </h3>
+          );
+        }
+      }
+
+      // var arr1 = ['Indian','American','British']; // or we can store array in the variable and pass this var also
+
+      ReactDOM.render(
+        <Person
+          id="1001"
+          fname="Chuck"
+          lname="Jones"
+          age="25"
+          gender="Male"
+          organization="Dell"
+          salary="850000/-"
+          nationality={["Indian", "American", "British"]}
+          interests={i}
+          qualification={j}
+        />,
+        document.getElementById("emp1")
+      );
+      ReactDOM.render(
+        <Person
+          id="1002"
+          fname="Sameer"
+          lname="K"
+          age="26"
+          gender="Male"
+          organization="Google"
+          salary="1000000/-"
+          nationality={["Indian", "American", "British"]}
+          interests={i}
+          qualification={j}
+        />,
+        document.getElementById("emp2")
+      );
+      ReactDOM.render(
+        <Person
+          id="1003"
+          fname="Ali"
+          lname="M"
+          age="27"
+          gender="Male"
+          organization="Microsoft"
+          salary="950000/-"
+          nationality={["Indian", "American", "British"]}
+          interests={i}
+          qualification={j}
+        />,
+        document.getElementById("emp3")
+      );
+
+      ReactDOM.render(
+        <Person
+          id="1004"
+          fname="Alia"
+          lname="S"
+          age="27"
+          organization="Deloitte"
+          salary="650000/-"
+          interests={i}
+          qualification={j}
+        />,
+        document.getElementById("emp4")
+      );
+
+      ReactDOM.render(
+        <Person
+          id="1005"
+          fname="Zara"
+          lname="R"
+          age="28"
+          organization="Collabera INC"
+          salary="750000/-"
+          interests={i}
+          qualification={j}
+        />,
+        document.getElementById("emp5")
+      );
+    </script>
+  </body>
+</html>
