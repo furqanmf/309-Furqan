@@ -8,11 +8,11 @@ class User extends Component {
     return (
       <div>
         <h2>My Name Is {this.props.name}</h2>
-        <Address address= {["Hyd","Secbad", "Gachibowli"]} />
-        <Hobby hobby={["Football" , "Surfin on Net"]}/>
-        <Qualification qualification={["B.Tech","M.Tech"]} />
+        <Address address={["Hyd", "Secbad", "Gachibowli"]} />
+        <Hobby hobby={["Football", "Surfing on Net"]} />
+        <Qualification qualification={["B.Tech", "M.Tech"]} />
 
-        You are from 
+        You are from
       </div>
     );
   }

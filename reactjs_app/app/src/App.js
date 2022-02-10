@@ -27,98 +27,108 @@ import HelloWorldFunc from "./components/HelloWorldFunc";
 import PlayerDetails from "./components/PlayerDetails";
 import NavBar from "./components/NavBar";
 import Playerlist from "./components/PlayerList";
+import ReducerConceptDemo from "./components/redux-demo/reducer-starter";
+import ReducerStarter2 from "./components/redux-demo/reducer-starter2";
+import ReduxDemo from "./components/redux-demo/ReduxDemo";
+
 // import Player from "./components/Player";
 
 
 
 function App() {
   return (
+    
     <Routes>
-  
-    <Route path="/" element={<Home />} />
+      
+      <Route path="/redux/reducers-demo" element={<ReducerConceptDemo />} />
+      <Route path="/redux" element={<ReducerStarter2 />} />
+      <Route path="/redux/redux-demo" element={<ReduxDemo />} />
+      
+      
+      <Route path="/" element={<Home />} />
 
-    {/* nested routing demo.............................. */}
-    <Route path="/test" element={<GreetingES6 />}>
-      <Route path="form-demos1" element={<ControlledComponentFormDemo />} />
-      <Route path="form-demos2" element={<ControlledComponentFormDemoWithMoreFormElements />} />
-      <Route path="form-demos3" element={<FormDemo1 />} />
-    </Route>
+      {/* nested routing demo.............................. */}
+      <Route path="/test" element={<GreetingES6 />}>
+        <Route path="form-demos1" element={<ControlledComponentFormDemo />} />
+        <Route path="form-demos2" element={<ControlledComponentFormDemoWithMoreFormElements />} />
+        <Route path="form-demos3" element={<FormDemo1 />} />
+      </Route>
 
-    {/* Demo params */}
-    <Route path="/hello/:city" element={<HelloWorldFunc />} />
-    <Route path="/hello2/:city" element={<HelloWorldFunc name="Furqan" />} />
-    <Route path="/hello2/:city/:country" element={<HelloWorldFunc name="Furqan" />} />
+      {/* Demo params */}
+      <Route path="/hello/:city" element={<HelloWorldFunc />} />
+      <Route path="/hello2/:city" element={<HelloWorldFunc name="Furqan" />} />
+      <Route path="/hello2/:city/:country" element={<HelloWorldFunc name="Furqan" />} />
 
-    <Route path="/player/:name" element={<PlayerDetails name="" />} />
-    <Route path="/player/:name/:age" element={<PlayerDetails name="" />} />
-    <Route path="/player/:name/:age/:role" element={<PlayerDetails name="" />} />
-    <Route path="/player/:name/:age/:role/:country" element={<PlayerDetails name=""/>} />
-    <Route path="/player/:name/:age/:role/:country/:totRuns" element={<PlayerDetails name="" />} />
-
-
+      <Route path="/player/:name" element={<PlayerDetails name="" />} />
+      <Route path="/player/:name/:age" element={<PlayerDetails name="" />} />
+      <Route path="/player/:name/:age/:role" element={<PlayerDetails name="" />} />
+      <Route path="/player/:name/:age/:role/:country" element={<PlayerDetails name="" />} />
+      <Route path="/player/:name/:age/:role/:country/:totRuns" element={<PlayerDetails name="" />} />
 
 
 
-    <Route path="/apps" element={<App1 />} />
-    <Route path="/players" element={<Playerlist />} />
-    <Route path="/form-demos" element={<PlayerRegisteration />} />
-    <Route path="/form-demos1" element={<ControlledComponentFormDemo />} />
-    <Route path="/form-demos2" element={<ControlledComponentFormDemoWithMoreFormElements />} />
-    <Route path="/form-demos3" element={<FormDemo1 />} />
-    <Route path="*" element={<NoPageFound />} />
-  </Routes>
-  
-)
+
+
+      <Route path="/apps" element={<App1 />} />
+      <Route path="/players" element={<Playerlist />} />
+      <Route path="/PlayerRegisteration" element={<PlayerRegisteration />} />
+      <Route path="/form-demos1" element={<ControlledComponentFormDemo />} />
+      <Route path="/form-demos2" element={<ControlledComponentFormDemoWithMoreFormElements />} />
+      <Route path="/form-demos3" element={<FormDemo1 />} />
+      <Route path="*" element={<NoPageFound />} />
+    </Routes>
+    
+  )
 };
 
 function Home() {
-return (
-  <NavBar />
-  // <div>
-  //   <Link style={{ margin: "20px" }} to="/">Home</Link>
-  //   <Link style={{ margin: "20px" }} to="/apps">App1</Link>
-  //   <Link style={{ margin: "20px" }} to="/form-demos">PlayerRegistration</Link>
-  //   <Link style={{ margin: "20px" }} to="/form-demos1">ControlledFormDemo</Link>
-  //   <Link style={{ margin: "20px" }} to="/form-demos2">ControlledFormDemoWithMore</Link>
-  //   <Link style={{ margin: "20px" }} to="/form-demos3">FormDemo</Link>
-  // </div>
+  return (
+    <NavBar />
+    // <div>
+    //   <Link style={{ margin: "20px" }} to="/">Home</Link>
+    //   <Link style={{ margin: "20px" }} to="/apps">App1</Link>
+    //   <Link style={{ margin: "20px" }} to="/form-demos">PlayerRegistration</Link>
+    //   <Link style={{ margin: "20px" }} to="/form-demos1">ControlledFormDemo</Link>
+    //   <Link style={{ margin: "20px" }} to="/form-demos2">ControlledFormDemoWithMore</Link>
+    //   <Link style={{ margin: "20px" }} to="/form-demos3">FormDemo</Link>
+    // </div>
 
-  //  <div>
-  //   <NavLink style={{ margin: "20px" }} to="/">Home</NavLink>
-  //   <NavLink style={{ margin: "20px" }} to="/apps">App1</NavLink>
-  //   <NavLink style={{ margin: "20px" }} to="/form-demos">PlayerRegistration</NavLink>
-  //   <NavLink style={{ margin: "20px" }} to="/form-demos1">ControlledFormDemo</NavLink>
-  //   <NavLink style={{ margin: "20px" }} to="/form-demos2">ControlledFormDemoWithMore</NavLink>
-  //   <NavLink style={{ margin: "20px" }} to="/form-demos3">FormDemo</NavLink>
-  // </div>
-)
+    //  <div>
+    //   <NavLink style={{ margin: "20px" }} to="/">Home</NavLink>
+    //   <NavLink style={{ margin: "20px" }} to="/apps">App1</NavLink>
+    //   <NavLink style={{ margin: "20px" }} to="/form-demos">PlayerRegistration</NavLink>
+    //   <NavLink style={{ margin: "20px" }} to="/form-demos1">ControlledFormDemo</NavLink>
+    //   <NavLink style={{ margin: "20px" }} to="/form-demos2">ControlledFormDemoWithMore</NavLink>
+    //   <NavLink style={{ margin: "20px" }} to="/form-demos3">FormDemo</NavLink>
+    // </div>
+  )
 }
 
 function App1() {
-return (
-    
+  return (
+       
     <FruitContext.Provider value={{ x: 2, y: 5 }}>
-    <NavBar />
+      <NavBar />
 
-     {/* router demo */}
+      {/* router demo */}
 
-    {/* event handling */}
+      {/* event handling */}
 
-    <ControlledComponentFormDemoWithMoreFormElements />
-  
-    <ControlledComponentFormDemo />
+      <ControlledComponentFormDemoWithMoreFormElements />
 
-    <PlayerRegisteration />
+      <ControlledComponentFormDemo />
 
-    <MyEventHandling />
+      <PlayerRegisteration />
 
-    <FormDemo1 />
- 
-   
-    
+      <MyEventHandling />
+
+      <FormDemo1 />
 
 
-      
+
+
+
+
       {/* functional coponent */}
       <Greeting name="FURQAN" />
       <GreetingES6 name="FURQAN" />

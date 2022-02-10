@@ -58,7 +58,7 @@ const PlayerRegistration = () => {
                     
                     PLAYER NAME : {state.name}<br/>
                     PLAYER AGE : {state.age}<br />
-                    AWARDS ACHIEVED : {state.awards}<br />
+                    AWARDS WON : {state.awards}<br />
                     TOTAL SCORE IN (Ranji Trophy) : {state.score} Runs<br/>
                     PLAYER ROLE : {state.role}<br/><br/><br/>
                     {/* Your Hobbies are : {state.hobby}<br /> */}
@@ -67,7 +67,7 @@ const PlayerRegistration = () => {
                     Enter Name : <input type="text" name="name" value={state.name} onChange={handleChange} /><br/>
                     Enter Age : <input type="text" name="age" value={state.age} onChange={handleChange} /><br/>
                     {/* radio */}
-                    Enter Awards : <input type="radio" name="awards" value={state.awardOptions[0]} onChange={handleChange} />STATE
+                    Enter Awards Won : <input type="radio" name="awards" value={state.awardOptions[0]} onChange={handleChange} />STATE
                     <input type="radio" name="awards" value={state.awardOptions[1]} onChange={handleChange} />NATIONAL<br/>
 
                     Enter Total Score : <input type="text" name="score" value={state.score} onChange={handleChange} /><br/>
